@@ -229,7 +229,7 @@ export function Box({ color, valid }) {
 
 ```tsx
 // example/components/LinaliaButton.tsx
-import { FC, useState } from "react";
+import React, { useState } from "react";
 import { styled } from "@linaria/react";
 
 const StyledButton = styled.button`
@@ -248,14 +248,15 @@ const StyledButton = styled.button`
     transition: all 0.2s;
   }
 
-  &[data-valid="before"]::before {
+  &[data-valid="before"]::before,
+  &[data-valid="active"]::before {
     content: "🐻";
     display: inline-block;
     padding-right: 0.5em;
   }
 
   &[data-valid="active"] {
-    transition-duration: 0.05s;
+    transition-duration: 0.2s;
     box-shadow: 0 0 0.2em #0003;
     transform: scale(0.95);
     filter: brightness(0.9) contrast(1.2);
@@ -268,11 +269,12 @@ const StyledButton = styled.button`
   }
 `;
 
-const LinaliaButton: FC = () => {
+const LinaliaButton: React.FC = () => {
   const [status, setStatus] = useState("before");
 
   const handleClick = () => {
     setStatus("active");
+    setTimeout(() => setStatus("before"), 200);
   };
 
   return (
