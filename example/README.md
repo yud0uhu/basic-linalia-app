@@ -286,28 +286,3 @@ const LinaliaButton: React.FC = () => {
 
 export default LinaliaButton;
 ```
-
-CSS Modules におけるクラスセレクタは、ブラウザ上で一意のクラス名に自動変換される
-
-```css
-sbkdnyv:active {
-  transition-duration: 0.05s;
-  box-shadow: 0 0 0.2em #0003;
-  transform: scale(0.95);
-  filter: brightness(0.9) contrast(1.2);
-}
-.sbkdnyv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 240px;
-  height: 48px;
-  border-radius: 50px;
-  background-color: rgb(245, 205, 0);
-  color: rgb(0, 0, 0);
-  font-weight: 700;
-  padding: 0.25em 1em;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-```
