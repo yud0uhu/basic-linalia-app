@@ -168,7 +168,6 @@ const StyledCustomCard = styled(CustomCard)`
 ```
 
 ### 動的に CSS スタイルを変更する
-
 **参考資料**
 [docs/DYNAMIC_STYLES.md](https://github.com/callstack/linaria/blob/v2.1.0/docs/DYNAMIC_STYLES.md)
 
@@ -226,6 +225,8 @@ export function Box({ color, valid }) {
 ```
 
 ## 例 : 動的に style を書き換える
+
+![画面収録-2023-10-03-16 39 40](https://github.com/yud0uhu/basic-css-modules-app/assets/60646787/cd3ae931-4e09-4bca-8d55-a13b68183658)
 
 ```tsx
 // example/components/LinaliaButton.tsx
